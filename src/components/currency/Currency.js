@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const Currency = () => {
 
   const countries = "https://api.frankfurter.dev/v1/currencies"
-  // const url =`https://api.frankfurter.dev/v1/latest?base=ZAR&symbols=ZAR`
 
 
 
