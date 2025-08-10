@@ -1,0 +1,74 @@
+.speech-home{
+    background:linear-gradient(cadetblue,rgb(3, 54, 56)) ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #Fff;
+    text-transform: capitalize;
+}
+.speech-home .content-speech{
+    border: 2px solid #000;
+    padding: 20px;
+    box-shadow:  1px 1px 15px #000;
+    border-radius: 25px;
+    transition: .5s;
+    max-width: 600px;
+}
+.speech-home .content-speech:hover{
+    box-shadow:  1px 1px 15px rgb(7, 188, 194);
+    transform: scale(1.01);
+
+}
+.speech-home .content-speech textarea{
+    width: 94%;
+    height: 200px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow:  1px 1px 15px rgb(12, 17, 17);
+    margin: 40px 0;
+    resize: none;
+    margin: auto;
+    color: #fff;
+}
+.speech-home .content-speech .choose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+.speech-home .content-speech select{
+    background-color:rgb(13, 125, 125) ;
+    width: 80%;
+    padding: 12px;
+ color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+.speech-home .content-speech select option{
+    
+}
+.speech-home .content-speech .range{
+    width: 100%;
+    margin: 40px 0;
+    cursor: pointer;
+}
+.speech-home .content-speech button{
+    width: 90%;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 22px;
+    color: #fff;
+    
+}
+.speech-home .arrow_back{
+        background-color: transparent;
+        color: #000;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 4px;
+}

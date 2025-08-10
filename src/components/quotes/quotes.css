@@ -1,0 +1,69 @@
+.quotes-home{
+    min-height: 100vh;
+    background: linear-gradient(#ec5bb2,#420640);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.quotes-home .content-quotes{
+    width: 500px;
+    min-height: 300px;
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+align-items: center;
+position: relative;
+box-shadow: 0 0 20px #40012f;
+border-radius: 30px;
+margin: 40px 0;
+}
+.quotes-home .content-quotes .anime{
+position: absolute;
+  top: -17px;
+  left: -45px;
+  background-color: #ea27e7;
+
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 30px;
+    
+}
+.quotes-home .content-quotes .name{
+position: absolute;
+  bottom: -17px;
+  right: -45px;
+  background-color: #ea27e7;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px;
+    
+}
+.quotes-home .content-quotes p{
+    font-size: 25px;
+    color: #fff;
+}
+    .quotes-home .content-quotes .btn-quotes{
+  background-color: #ea27e7;
+        padding: 10px;
+        color: #fff;
+        border-radius: 30px;
+        transition: .6s;
+        text-align: center;
+        border: none;
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+    .quotes-home .content-quotes .btn-quotes:hover{
+      background-color: #8a0f86;
+      transform: scaleX(1.2);
+      
+    }
+    .quotes-home .arrow_back{
+          background-color: transparent;
+          color: #000;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 4px;
+    }

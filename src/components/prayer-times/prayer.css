@@ -1,0 +1,25 @@
+.prayer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:16px ;
+    border-radius: 20px;
+    background-color: rgb(22, 152, 152);
+    padding: 2px;
+    box-shadow:  0 0 8px rgb(1, 78, 78) ;
+}
+.prayer p{
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #fff;
+}
+.prayer p:nth-of-type(2){
+    margin-right: 15px;
+}
+
+@media (max-width:660px) {
+    .prayer p{
+        font-size: 1.5rem;
+    }
+
+}

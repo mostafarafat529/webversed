@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home-currency{
+    height: 100vh;
+    background: linear-gradient(#5c83b0 20%,#0e0e0e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-currency .content-currency{
+    box-shadow: 0 0 10px #000;
+    padding: 20px;
+    border-radius: 30px;
+    color: #fff;
+    transition: .5s;
+    min-width: 600px;
+}
+.home-currency .content-currency h1{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.home-currency .content-currency h1::first-letter{
+    color: #000;
+}
+.home-currency .content-currency .selects{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.home-currency .content-currency .selects .convert-country{
+    display: flex;
+    flex-direction: column;
+}
+.home-currency .content-currency .selects .convert-country select{
+    width: 180px;
+    /* background-color: #1074b8; */
+    background-color: transparent;
+    border: 1px solid #6c95c4;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 8px;
+    color: #fff;
+}
+.home-currency .content-currency .selects .convert-country select option{
+background-color: #5c83b0;
+
+}
+.home-currency .content-currency .selects .convert-country label{
+    font-size: 26px;
+    color: #ffffff;
+}
+.home-currency .content-currency .inps{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+.home-currency .content-currency .inps input{
+    background-color: transparent;
+    border: 1px solid #61abff;
+    outline: none;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 20px;
+    color: #fff;
+}
+.home-currency .content-currency .inps label{
+    font-size: 26PX;
+}
+.home-currency .content-currency .result{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: rgb(7, 197, 83);
+    margin: 16px 0;
+}
+.home-currency .content-currency button{
+    float: right;
+    background-color: #0e0e0e;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 14px;
+    color: #fff;
+}
+.home-currency .content-currency button:hover{
+    background-color: #0000003e;
+}
+.home-currency .content-currency .sign{
+    margin-top:40px ;
+    color: #000;
+    font-weight: bold;
+    transition: .4s;
+    cursor: pointer;
+}
+.home-currency .content-currency .sign:hover{
+transform: scale(1.2);
+}

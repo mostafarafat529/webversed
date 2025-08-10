@@ -1,0 +1,26 @@
+
+.container-fluid .navbar-brand {
+    color: rgb(3, 98, 139);
+    font-weight: bold;
+    font-size: 26px;
+}
+.collapse{
+    background-color: rgb(3, 98, 139);
+    padding: 6px;
+    box-shadow: 1px 1px 50px #01243a;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #01243a;
+}
+.collapse ul li a{
+    color: #fff !important;
+    transition: .4s;
+}
+.collapse ul li a:hover{
+    color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-10px);
+    border-bottom:1px solid #ffffff ;
+}
+
+

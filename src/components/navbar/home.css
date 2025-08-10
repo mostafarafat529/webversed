@@ -1,0 +1,146 @@
+.home{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    min-height: 100vh;
+    background-image: url("/src/images/360_F_886781233_Jv7drt1cMtCmIgGUTPCE0Mb6uspWiRbd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home .hero .hero-content h1{
+    font-size: 5rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px solid #03e9a4;
+    text-align: center;
+}
+.home .hero .hero-content p{
+    font-size: 26px;
+    color: #ffffffd6;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+.home .hero .hero-content p,
+.home .hero .hero-content h1{
+    animation: fadeInUp 1s ease-out;      
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.home .hero .search-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+
+}
+.home .hero .search-bar label{
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+.home .hero .search-bar input{
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(5px);
+color: white;
+border: 1px solid #03e9a4;
+padding: 10px;
+border-radius: 16px;
+outline: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,400px));
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+.cards .card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: .5s;
+    cursor: pointer;
+    background-color:#ffffff3f ;
+    border: 2px solid #03e9a4;
+}
+.cards .card:hover{
+    transform:  scale(1.1);
+}
+
+.cards img{
+    transition: .3s ease;
+    height: 200px;
+    overflow: hidden;
+}
+.cards img:hover{
+    transform: scale(1.05) ;
+}
+.cards .card h5{
+    color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.cards .card p{
+    font-size: 18px;
+    color: #ffffffc2;
+
+}
+    .cards .card .btn{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 28px;
+        /* color: #047185; */
+        color: #03e9a4;
+        animation: moving 1s linear infinite;
+        transition: .5s;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cards .card .btn span{
+        font-size: 12px;
+        opacity: 0;
+        transition: .5s;
+    }
+    .cards .card .btn:hover{
+        background-color: rgba(5, 116, 146, 0.2);
+    }
+    .cards .card .btn:hover span{
+        opacity: 1;
+    }
+    @keyframes moving {
+        0%{
+transform: translateX(0);
+}
+20%{
+    transform: translateX(10px);
+
+}
+50%{
+            transform: translateX(5px);
+            
+        }
+        80%{
+            transform: translateX(20px);
+
+        }
+        100%{
+            transform: translateX(0);
+
+        }
+        
+    } 
