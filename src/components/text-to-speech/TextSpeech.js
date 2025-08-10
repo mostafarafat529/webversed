@@ -70,9 +70,7 @@
 // export default TextSpeech;
 
 
-
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './textspeech.css';
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
@@ -81,9 +79,20 @@ const TextSpeech = () => {
   const [valuetext, setvaluetext] = useState("");
   const [valuevoice, setvaluevoice] = useState(null);
   const [range, setrange] = useState(1);
+  const [voices, setVoices] = useState([]);
 
   const navigation = useNavigate();
-  const voices = window.speechSynthesis.getVoices();
+
+  // Load voices after browser initializes them
+  useEffect(() => {
+    const loadVoices = () => {
+      const allVoices = window.speechSynthesis.getVoices();
+      setVoices(allVoices);
+    };
+
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+  }, []);
 
   const convertspeech = () => {
     if (!valuetext.trim()) return;
@@ -113,7 +122,7 @@ const TextSpeech = () => {
             <option value="">Choose voice</option>
             {voices.map((item, index) => (
               <option key={index} value={item.name}>
-                {item.name}
+                {item.name} ({item.lang})
               </option>
             ))}
           </select>
