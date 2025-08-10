@@ -15,6 +15,7 @@ const LocationFinder = () => {
     if (!input) return;
 
     const ApiKey = process.env.REACT_APP_OPENAI_API_KEY2;
+    
     const url = `https://api.opencagedata.com/geocode/v1/json?q=${input}&key=${ApiKey}`;
 
     try {
