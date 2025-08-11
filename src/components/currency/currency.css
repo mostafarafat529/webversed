@@ -29,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     
 }
 .home-currency .content-currency .selects .convert-country{
@@ -98,4 +99,54 @@ background-color: #5c83b0;
 }
 .home-currency .content-currency .sign:hover{
 transform: scale(1.2);
+}
+
+
+
+
+@media (max-width: 700px) {
+    .home-currency .content-currency {
+        min-width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .home-currency .content-currency h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    .home-currency .content-currency .selects {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .home-currency .content-currency .selects .convert-country {
+        width: 100%;
+        min-width: auto;
+    }
+    .home-currency .content-currency .selects .convert-country select {
+        font-size: 16px;
+        padding: 6px;
+    }
+    .home-currency .content-currency .inps label {
+        font-size: 20px;
+    }
+    .home-currency .content-currency .inps input {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .home-currency .content-currency .result {
+        font-size: 24px;
+        text-align: center;
+    }
+    .home-currency .content-currency button {
+        width: 100%;
+        float: none;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+    .home-currency .content-currency .sign {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
 }
