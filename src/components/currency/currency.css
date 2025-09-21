@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .home-currency .content-currency{
     box-shadow: 0 0 10px #000;
