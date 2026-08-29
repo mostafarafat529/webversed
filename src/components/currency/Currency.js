@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./currency.css"
 import { FaExchangeAlt } from "react-icons/fa";
-import { FaLongArrowAltLeft } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import ApiDetails from "../apiDetails/apiDetails";
+import { API_DETAILS } from "../apiDetails/apiDetailsData";
 
 
 const Currency = () => {
@@ -11,13 +11,11 @@ const Currency = () => {
 
 
 
-  const [from ,setfrom] = useState("AUD");
-  const [to ,setto] = useState("AUD");
-  const [selects ,setselects] = useState([]);
-  const [input,setinput] = useState(1)
-  const [converted,setconverted] = useState(null)
-
-  const navigation =useNavigate("")
+  const [from, setfrom] = useState("AUD");
+  const [to, setto] = useState("AUD");
+  const [selects, setselects] = useState([]);
+  const [input, setinput] = useState(1)
+  const [converted, setconverted] = useState(null)
 
 
 
@@ -27,8 +25,6 @@ const Currency = () => {
     .then((data) => {
 const convertedAmount = (input * data.rates[to]).toFixed(2);
 setconverted(convertedAmount);
-
-      // alert(`${input} ${from} = ${convertedAmount} ${to}`);
     });
   }
 
@@ -46,17 +42,17 @@ const exchange_country = () => {
   const temp = from;
   setfrom(to);
   setto(temp);
-convert(from, to, input)
+convert(to, from, input)
 };
 
 
   return (
     <div className='home-currency'>
       <div className='content-currency'>
-        <h1>currency convertor</h1>
+        <h1>Currency Converter</h1>
         <div className='selects' >
           <div className='convert-country'>
-            <label>from</label>
+            <label>From</label>
             <select onChange={(e)=>setfrom(e.target.value)} value={from}>
               {selects.map((state,index)=>(
                 <option key={index} value={state}>{state}</option>
@@ -67,7 +63,7 @@ convert(from, to, input)
             <FaExchangeAlt className='sign fs-2' onClick={exchange_country} />
           </div>
           <div className='convert-country'>
-            <label>to</label>
+            <label>To</label>
             <select onChange={(e)=>setto(e.target.value)} value={to} >
               {selects.map((state,index)=>(
                 <option key={index} value={state}>{state}</option>
@@ -76,14 +72,13 @@ convert(from, to, input)
           </div>
         </div>
         <div className='inps'>
-          <label>amount</label>
+          <label>Amount</label>
           <input type='number' placeholder='the amount' value={input} onChange={(e)=>setinput(e.target.value)} />
         </div>
-        <p className='result'> converted amount :{converted} {to}</p>
-        <button onClick={()=>convert(from, to, input)}>convert</button>
+        <p className='result'>Converted amount: {converted} {to}</p>
+        <button onClick={()=>convert(from, to, input)}>Convert</button>
+        <ApiDetails meta={API_DETAILS.currency} />
       </div>
-                          <div className='arrow_back' onClick={()=>navigation("/")} ><FaLongArrowAltLeft/></div>
-      
     </div>
   )
 }

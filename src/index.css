@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+:root {
+  --bg-deep: #0a1628;
+  --bg-mid: #0f2037;
+  --bg-light: #16294a;
+
+  /* Card colors: dark navy, slightly lighter than the main background */
+  --card-bg: #13213a;
+  --card-bg-hover: #172a48;
+  --card-border: #22385a;
+  --card-border-hover: #3b6ea5;
+
+  --accent: #22d3ee;
+  --accent-soft: #38bdf8;
+  --accent-strong: #0ea5e9;
+
+  --text-primary: #e8f1ff;
+  --text-muted: #a9c1e4;
+  --text-strong: #ffffff;
+
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --radius: 18px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+  --btn-bg: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 100%);
+  --btn-text: #04121f;
+
+  --focus-ring: 0 0 0 3px rgba(34, 211, 238, 0.45);
+
+  --font:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text-primary);
+  background: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background:
+    radial-gradient(1100px 600px at 15% -5%, rgba(34, 211, 238, 0.14), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(56, 189, 248, 0.12), transparent 55%),
+    linear-gradient(160deg, #0b1a30 0%, #0a1628 45%, #0c1c33 100%);
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+}
+
+/* Accessible focus states */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+/* Remove Bootstrap's default card/button overrides that conflict with our design */
+.card,
+.btn {
+  background: none;
+  border: none;
 }
